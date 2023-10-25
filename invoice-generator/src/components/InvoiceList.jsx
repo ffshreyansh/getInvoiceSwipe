@@ -23,9 +23,9 @@ const InvoiceList = () => {
         }
       };
 
-    function hideTG(){
-        setOpenDropdownIndex(null);
-    }
+    // function hideTG(){
+    //     setOpenDropdownIndex(null);
+    // }
     const handleAdd = () => {
         navigate("/invoice", { state: null });
     };
@@ -55,18 +55,11 @@ const InvoiceList = () => {
         setShowInvoiceModal(false);
     };
 
-    useEffect(() => {
-        const divElement = document.querySelector('.hideTg'); 
-        divElement.addEventListener('click', hideTG);
     
-        return () => {
-          divElement.removeEventListener('click', hideTG);
-        };
-      }, []);
 
     return (
         <div className="xp vh-100 " style={{ backgroundColor: "#f2f3f7" }} >
-            <div className='bg-white vh-100 border p-2 p-md-4 p-sm-3 hideTg' style={{ borderRadius: "14px", overflow: "hidden" }}>
+            <div className='bg-white vh-100 border p-2 p-md-4 p-sm-3 ' style={{ borderRadius: "14px", overflow: "hidden" }}>
                 <div className="text-center mb-3 d-flex flex-column flex-md-row gap-2 w-md-100 align-items-center justify-content-between mb-5">
                     <h1 className='mb-0'><strong>SWIPE</strong> <em>INVOICES</em></h1>
                     <Button
